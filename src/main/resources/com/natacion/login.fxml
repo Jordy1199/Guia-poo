@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.natacion.controller.LoginController"
+            prefWidth="400" prefHeight="350"
+            style="-fx-background-color: #1a1a2e;">
+
+    <VBox alignment="CENTER" spacing="15"
+          AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <Label text="🏊 Sistema de Natación"
+               style="-fx-text-fill: #00d4ff; -fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+        <Label text="Iniciar Sesión"
+               style="-fx-text-fill: #ffffff; -fx-font-size: 14px;"/>
+
+        <TextField fx:id="txtUsuario" promptText="Usuario"
+                   prefWidth="250" prefHeight="35"
+                   style="-fx-background-radius: 8; -fx-font-size: 13px;"/>
+
+        <PasswordField fx:id="txtContrasena" promptText="Contraseña"
+                       prefWidth="250" prefHeight="35"
+                       style="-fx-background-radius: 8; -fx-font-size: 13px;"/>
+
+        <Label fx:id="lblError"
+               style="-fx-text-fill: #ff4444; -fx-font-size: 12px;"
+               text=""/>
+
+        <HBox alignment="CENTER" spacing="15">
+            <Button fx:id="btnIngresar" text="Ingresar"
+                    prefWidth="110" prefHeight="35"
+                    onAction="#handleIngresar"
+                    style="-fx-background-color: #00d4ff; -fx-text-fill: #000000; -fx-font-weight: bold; -fx-background-radius: 8;"/>
+
+            <Button fx:id="btnSalir" text="Salir"
+                    prefWidth="110" prefHeight="35"
+                    onAction="#handleSalir"
+                    style="-fx-background-color: #ff4444; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-background-radius: 8;"/>
+        </HBox>
+
+    </VBox>
+</AnchorPane>
